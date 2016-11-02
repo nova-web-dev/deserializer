@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7aaaf07-8491-49d3-8942-b6a0b02ed616" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/UnusedMethods.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
@@ -25,7 +26,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/testEnv$Main.coverage" NAME="Main Coverage Results" MODIFIED="1477989358466" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/testEnv$Main.coverage" NAME="Main Coverage Results" MODIFIED="1478082340575" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -39,13 +40,28 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2251">
-              <caret line="197" column="5" selection-start-line="197" selection-start-column="5" selection-end-line="197" selection-end-column="5" />
+            <state relative-caret-position="840">
+              <caret line="40" column="55" selection-start-line="40" selection-start-column="55" selection-end-line="40" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#706#727#0" expanded="true" />
+                <element signature="e#707#728#0" expanded="true" />
+                <element signature="method#deserializeFile#0;class#Main#0" expanded="false" />
+                <element signature="method#serializeFile#0;class#Main#0" expanded="false" />
+                <element signature="method#fileToObject#0;class#Main#0" expanded="false" />
+                <element signature="method#printMap#0;class#Main#0" expanded="false" />
+                <element signature="method#getAlternateDataStream#0;class#Main#0" expanded="false" />
                 <element signature="method#streamToFile#0;class#Main#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UnusedMethods.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/UnusedMethods.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="84">
+              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -78,6 +94,13 @@
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -92,6 +115,7 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/collect_new.settings" />
+        <option value="$PROJECT_DIR$/src/UnusedMethods.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
       </list>
     </option>
@@ -449,6 +473,19 @@
       <listeners />
       <method />
     </configuration>
+    <configuration default="true" type="executeSpecs" factoryName="Gauge Execution">
+      <setting name="environment" value="" />
+      <setting name="specsToExecute" value="" />
+      <setting name="tags" value="" />
+      <setting name="parallelNodes" value="" />
+      <setting name="execInParallel" value="false" />
+      <setting name="programParameters" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="moduleName" value="" />
+      <envMap />
+      <setting name="rowsRange" value="" />
+      <method />
+    </configuration>
     <list size="1">
       <item index="0" class="java.lang.String" itemvalue="Application.Main" />
     </list>
@@ -484,6 +521,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31174535" sideWeight="0.49583334" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -498,7 +536,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -530,7 +567,12 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#706#727#0" expanded="true" />
+            <element signature="e#707#728#0" expanded="true" />
+            <element signature="method#deserializeFile#0;class#Main#0" expanded="false" />
+            <element signature="method#serializeFile#0;class#Main#0" expanded="false" />
+            <element signature="method#fileToObject#0;class#Main#0" expanded="false" />
+            <element signature="method#printMap#0;class#Main#0" expanded="false" />
+            <element signature="method#getAlternateDataStream#0;class#Main#0" expanded="false" />
             <element signature="method#streamToFile#0;class#Main#0" expanded="false" />
           </folding>
         </state>
@@ -564,7 +606,12 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#706#727#0" expanded="true" />
+            <element signature="e#707#728#0" expanded="true" />
+            <element signature="method#deserializeFile#0;class#Main#0" expanded="false" />
+            <element signature="method#serializeFile#0;class#Main#0" expanded="false" />
+            <element signature="method#fileToObject#0;class#Main#0" expanded="false" />
+            <element signature="method#printMap#0;class#Main#0" expanded="false" />
+            <element signature="method#getAlternateDataStream#0;class#Main#0" expanded="false" />
             <element signature="method#streamToFile#0;class#Main#0" expanded="false" />
           </folding>
         </state>
@@ -598,7 +645,12 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#706#727#0" expanded="true" />
+            <element signature="e#707#728#0" expanded="true" />
+            <element signature="method#deserializeFile#0;class#Main#0" expanded="false" />
+            <element signature="method#serializeFile#0;class#Main#0" expanded="false" />
+            <element signature="method#fileToObject#0;class#Main#0" expanded="false" />
+            <element signature="method#printMap#0;class#Main#0" expanded="false" />
+            <element signature="method#getAlternateDataStream#0;class#Main#0" expanded="false" />
             <element signature="method#streamToFile#0;class#Main#0" expanded="false" />
           </folding>
         </state>
@@ -618,7 +670,12 @@
           <caret line="16" column="51" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#706#727#0" expanded="true" />
+            <element signature="e#707#728#0" expanded="true" />
+            <element signature="method#deserializeFile#0;class#Main#0" expanded="false" />
+            <element signature="method#serializeFile#0;class#Main#0" expanded="false" />
+            <element signature="method#fileToObject#0;class#Main#0" expanded="false" />
+            <element signature="method#printMap#0;class#Main#0" expanded="false" />
+            <element signature="method#getAlternateDataStream#0;class#Main#0" expanded="false" />
             <element signature="method#streamToFile#0;class#Main#0" expanded="false" />
           </folding>
         </state>
@@ -638,7 +695,12 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#706#727#0" expanded="true" />
+            <element signature="e#707#728#0" expanded="true" />
+            <element signature="method#deserializeFile#0;class#Main#0" expanded="false" />
+            <element signature="method#serializeFile#0;class#Main#0" expanded="false" />
+            <element signature="method#fileToObject#0;class#Main#0" expanded="false" />
+            <element signature="method#printMap#0;class#Main#0" expanded="false" />
+            <element signature="method#getAlternateDataStream#0;class#Main#0" expanded="false" />
             <element signature="method#streamToFile#0;class#Main#0" expanded="false" />
           </folding>
         </state>
@@ -650,7 +712,12 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#706#727#0" expanded="true" />
+            <element signature="e#707#728#0" expanded="true" />
+            <element signature="method#deserializeFile#0;class#Main#0" expanded="false" />
+            <element signature="method#serializeFile#0;class#Main#0" expanded="false" />
+            <element signature="method#fileToObject#0;class#Main#0" expanded="false" />
+            <element signature="method#printMap#0;class#Main#0" expanded="false" />
+            <element signature="method#getAlternateDataStream#0;class#Main#0" expanded="false" />
             <element signature="method#streamToFile#0;class#Main#0" expanded="false" />
           </folding>
         </state>
@@ -720,13 +787,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/UnusedMethods.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2251">
-          <caret line="197" column="5" selection-start-line="197" selection-start-column="5" selection-end-line="197" selection-end-column="5" />
+        <state relative-caret-position="840">
+          <caret line="40" column="55" selection-start-line="40" selection-start-column="55" selection-end-line="40" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#706#727#0" expanded="true" />
+            <element signature="e#707#728#0" expanded="true" />
+            <element signature="method#deserializeFile#0;class#Main#0" expanded="false" />
+            <element signature="method#serializeFile#0;class#Main#0" expanded="false" />
+            <element signature="method#fileToObject#0;class#Main#0" expanded="false" />
+            <element signature="method#printMap#0;class#Main#0" expanded="false" />
+            <element signature="method#getAlternateDataStream#0;class#Main#0" expanded="false" />
             <element signature="method#streamToFile#0;class#Main#0" expanded="false" />
           </folding>
         </state>

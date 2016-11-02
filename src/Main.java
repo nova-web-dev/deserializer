@@ -12,6 +12,7 @@ public class Main {
         //file to parse
         String file = "collect.settings";
 
+
         //Creates an object from a file, and prints it to console
         deserializeFile(file, true);
 
@@ -31,20 +32,12 @@ public class Main {
         }
 
 
-        /*  TESTING :  OUTPUT  - can delete */
-        //        System.out.println("\n\nORIGINAL LIST:");
-        //        for (int i = 0; i < collectedSettings.length; i++) {
-        //            printMap(mapsList.get(i));
-        //            System.out.println("\n\n");
-        //        }
 
-        //update entry
+//      Update the file before serializing again
 //        mapsList.get(0).put("username", "carl@test.com");
         mapsList.get(0).put("username", "test");
         mapsList.get(0).put("password", "t3stt3st");
         mapsList.get(0).put("autosend_wifi", true);
-//        mapsList.get(0).put("username", "carl@test.com");
-//        mapsList.get(0).put("username", "carl@test.com");
 //        mapsList.get(1).put("change_username", true);
         System.out.println("\n\nUPDATED  LIST:");
 
@@ -55,19 +48,7 @@ public class Main {
 
         serializeFile("collect_new.settings", mapsList);
 
-        //copies Alternate Data Stream
-        //this should probably be changed. TODO Use relative path instead of absolute path? Change this to your outfile path but keep the ":Zone.Identifier"
-        if (USE_ZONE){
-            try{
-                String s = getAlternateDataStream(file + ":Zone.Identifier").toString();
-                streamToFile(s, "C:\\Users\\Carl\\Workspace\\testEnv\\collect_new.settings:Zone.Identifier");
-            } catch(Exception ex){
-                System.out.println("EXCEPTION: " + ex);
-            }
-        }
 
-
-        //C:\Users\Carl\Workspace\testEnv
     }
 
     private static void deserializeFile(String fileName, boolean debugOutput) {
@@ -110,8 +91,6 @@ public class Main {
                 objectOutputStream.writeObject(contents.get(i));
 
             }
-
-
         } catch (IOException e) {
             System.out.println("oops...");
             e.printStackTrace();
@@ -197,3 +176,12 @@ public class Main {
         }
     }
 }
+
+
+
+        /*  TESTING :  OUTPUT  - can delete */
+//        System.out.println("\n\nORIGINAL LIST:");
+//        for (int i = 0; i < collectedSettings.length; i++) {
+//            printMap(mapsList.get(i));
+//            System.out.println("\n\n");
+//        }
