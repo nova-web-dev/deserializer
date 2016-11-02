@@ -18,10 +18,10 @@ public class Main {
         Object[] collectedSettings = fileToObject(file);
         System.out.println("Number of objects : " + collectedSettings.length);
 
-        Map<String, String> newMap;
+        Map<Object, Object> newMap;
 
         // Create an array list of maps, mapsList
-        List<Map<String, String>> mapsList = new ArrayList<Map<String, String>>();      //Creates a list of maps that are found in the 'collectedSettings' object
+        List<Map<Object, Object>> mapsList = new ArrayList<Map<Object, Object>>();      //Creates a list of maps that are found in the 'collectedSettings' object
 
         //Runs through the array of objects  and adds to mapsList
         for (int i = 0; i < collectedSettings.length; i++) {
@@ -42,9 +42,7 @@ public class Main {
 //        mapsList.get(0).put("username", "carl@test.com");
         mapsList.get(0).put("username", "test");
         mapsList.get(0).put("password", "t3stt3st");
-
-
-//        mapsList.get(0).put("autosend_wifi", true);
+        mapsList.get(0).put("autosend_wifi", true);
 //        mapsList.get(0).put("username", "carl@test.com");
 //        mapsList.get(0).put("username", "carl@test.com");
 //        mapsList.get(1).put("change_username", true);
@@ -100,7 +98,7 @@ public class Main {
         //System.out.println("\nThere are " + countLines + " line(s) in the file.");
     }
 
-    private static void serializeFile(String fileName, List<Map<String, String>> contents) {
+    private static void serializeFile(String fileName, List<Map<Object, Object>> contents) {
         try {
             FileOutputStream outputStream = new FileOutputStream(fileName);
             ObjectOutputStream objectOutputStream = new ObjectOutputStream(outputStream);
