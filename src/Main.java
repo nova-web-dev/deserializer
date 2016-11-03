@@ -6,12 +6,22 @@ import java.util.*;
 public class Main {
     private static int countLines = 0;
     private static String[] fileArray;
-    private static boolean USE_ZONE = false;
 
     public static void main(String[] args) {
+
+        String sentOdkUsername = "";
+        String sentOdkPassword = "";
+        boolean argumentsGiven = false;
+
+        if (args.length == 2){
+            sentOdkUsername = args[0];
+            sentOdkPassword = args[1];
+            argumentsGiven = true;
+        }
+
+
         //file to parse
         String file = "collect.settings";
-
 
         //Creates an object from a file, and prints it to console
         deserializeFile(file, true);
@@ -31,24 +41,25 @@ public class Main {
             mapsList.add(i, newMap);                                                    //adds each map to the list
         }
 
-
-
-//      Update the file before serializing again
-//        mapsList.get(0).put("username", "carl@test.com");
+        // Update the file before serializing again
+        // mapsList.get(0).put("username", "carl@test.com");
         mapsList.get(0).put("username", "test");
         mapsList.get(0).put("password", "t3stt3st");
+
+        if (argumentsGiven){
+            mapsList.get(0).put("username", sentOdkUsername);
+            mapsList.get(0).put("password", sentOdkPassword);
+        }
+
         mapsList.get(0).put("autosend_wifi", true);
-//        mapsList.get(1).put("change_username", true);
+        // mapsList.get(1).put("change_username", true);
         System.out.println("\n\nUPDATED  LIST:");
 
         for (int i = 0; i < collectedSettings.length; i++) {
             printMap(mapsList.get(i));
             System.out.println("\n\n");
         }
-
         serializeFile("collect_new.settings", mapsList);
-
-
     }
 
     private static void deserializeFile(String fileName, boolean debugOutput) {
@@ -69,7 +80,9 @@ public class Main {
             fileIn.close();
 
         } catch (IOException i) {
-            //System.out.println(i);
+            System.out.println(i);
+//            System.out.println("ERROR - File not found! Make sure 'collect.settings' is in the directory of this application.");
+//            System.exit(0);
         } catch (ClassNotFoundException ex) {
             System.out.println(ex);
         }
@@ -86,10 +99,9 @@ public class Main {
 
             //Run through the maps list
             for (int i = 0; i < 2; i++) {
-                //                printMap(contents.get(i));
-                //                System.out.println("\n\n");
+                // printMap(contents.get(i));
+                // System.out.println("\n\n");
                 objectOutputStream.writeObject(contents.get(i));
-
             }
         } catch (IOException e) {
             System.out.println("oops...");
@@ -174,6 +186,10 @@ public class Main {
         } catch (IOException i) {
             i.printStackTrace();
         }
+    }
+
+    private static void setupODK(String odkUsername, String odkPassword){
+
     }
 }
 
