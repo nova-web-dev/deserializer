@@ -6,60 +6,38 @@ import java.util.*;
 public class Main {
     private static int countLines = 0;
     private static String[] fileArray;
+    public static boolean argumentsGiven;
 
     public static void main(String[] args) {
 
         String sentOdkUsername = "";
         String sentOdkPassword = "";
-        boolean argumentsGiven = false;
+        argumentsGiven = false;
 
         if (args.length == 2){
             sentOdkUsername = args[0];
             sentOdkPassword = args[1];
             argumentsGiven = true;
         }
+        else{
+            System.out.println("WARNING: Incorrect number of arguments given.");
+            System.out.println("WARNING: Arguments should be 'Username, Password'.");
+            System.out.println("WARNING: Running program in test mode.\n");
+        }
 
-
-        //file to parse
+        //1. Read in the file
         String file = "collect.settings";
-
-        //Creates an object from a file, and prints it to console
-        deserializeFile(file, true);
-
         Object[] collectedSettings = fileToObject(file);
+        //Debug Output
         System.out.println("Number of objects : " + collectedSettings.length);
 
-        Map<Object, Object> newMap;
+        //2. Inject the username and password into the file object
+        List<Map<Object, Object>> mapsListFromFile = new ArrayList<Map<Object, Object>>();
+        mapsListFromFile = setupODK(collectedSettings, sentOdkUsername, sentOdkPassword);
 
-        // Create an array list of maps, mapsList
-        List<Map<Object, Object>> mapsList = new ArrayList<Map<Object, Object>>();      //Creates a list of maps that are found in the 'collectedSettings' object
+        //3. Print out a serialized file
+        serializeFile("collect_new.settings", mapsListFromFile);
 
-        //Runs through the array of objects  and adds to mapsList
-        for (int i = 0; i < collectedSettings.length; i++) {
-            //noinspection unchecked
-            newMap = (Map) collectedSettings[i];                                        //creates a map from the object
-            mapsList.add(i, newMap);                                                    //adds each map to the list
-        }
-
-        // Update the file before serializing again
-        // mapsList.get(0).put("username", "carl@test.com");
-        mapsList.get(0).put("username", "test");
-        mapsList.get(0).put("password", "t3stt3st");
-
-        if (argumentsGiven){
-            mapsList.get(0).put("username", sentOdkUsername);
-            mapsList.get(0).put("password", sentOdkPassword);
-        }
-
-        mapsList.get(0).put("autosend_wifi", true);
-        // mapsList.get(1).put("change_username", true);
-        System.out.println("\n\nUPDATED  LIST:");
-
-        for (int i = 0; i < collectedSettings.length; i++) {
-            printMap(mapsList.get(i));
-            System.out.println("\n\n");
-        }
-        serializeFile("collect_new.settings", mapsList);
     }
 
     private static void deserializeFile(String fileName, boolean debugOutput) {
@@ -79,11 +57,9 @@ public class Main {
             in.close();
             fileIn.close();
 
-        } catch (IOException i) {
-            System.out.println(i);
-//            System.out.println("ERROR - File not found! Make sure 'collect.settings' is in the directory of this application.");
-//            System.exit(0);
-        } catch (ClassNotFoundException ex) {
+        } catch (java.io.EOFException i) {
+            System.out.println("\nEnd of file reached.");
+        } catch (ClassNotFoundException | IOException ex) {
             System.out.println(ex);
         }
         if (debugOutput) {
@@ -188,7 +164,41 @@ public class Main {
         }
     }
 
-    private static void setupODK(String odkUsername, String odkPassword){
+    private static List<Map<Object, Object>> setupODK(Object[] currentSettings, String odkUsername, String odkPassword){
+
+        // Create an array list of maps, mapsList
+        List<Map<Object, Object>> newMapList = new ArrayList<Map<Object, Object>>();      //Creates a list of maps that are found in the 'collectedSettings' object
+
+        //Runs through the array of objects  and adds to mapsList
+        for (int i = 0; i < currentSettings.length; i++) {
+            //noinspection unchecked
+            Map<Object, Object> newMap = (Map) currentSettings[i];                                        //creates a map from the object
+            newMapList.add(i, newMap);                                                    //adds each map to the list
+        }
+
+        // Update the file before serializing again
+        // mapsList.get(0).put("username", "carl@test.com");
+        newMapList.get(0).put("username", "test");
+        newMapList.get(0).put("password", "t3stt3st");
+
+        if (argumentsGiven){
+            newMapList.get(0).put("username", odkUsername);
+            newMapList.get(0).put("password", odkPassword);
+        }
+
+        newMapList.get(0).put("autosend_wifi", true);
+        // mapsList.get(1).put("change_username", true);
+        System.out.println("\n\nUPDATED  LIST:");
+
+        for (int i = 0; i < currentSettings.length; i++) {
+            printMap(newMapList.get(i));
+            System.out.println("\n\n");
+        }
+
+        return newMapList;
+
+    }
+    private static void test(){
 
     }
 }
