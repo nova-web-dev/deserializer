@@ -8,20 +8,25 @@ public class Main {
     private static String[] fileArray;
     private static boolean argumentsGiven;
     public static boolean DEBUG_MODE = true;
-    public static boolean READ_FROM_FILE = false;
+    private static boolean READ_FROM_FILE = false;
     private static String sentOdkUsername = "";
     private static String sentOdkPassword = "";
+    private static Object [] stringFile = new Object[2];
+
+    private static String[] file1Strings;
+    private static String[] file1Booleans;
+    private static String[] file1Long;
+
+    private static String[] file2Strings;
+    private static String[] file2Booleans;
+    private static String[] file2Long;
 
 
     public static void main(String[] args) {
 
         //Neat method for evaluating command line arguments
         evaluateArguments(args);
-
-        //Store a hardcoded string
-        Object [] stringFile = new Object[2];
-        stringFile[0] = "{submission_url=/submission, lastVersion=1062, selected_google_account=, firstRun=false, font_size=21, map_basemap_behavior=streets, constraint_behavior=on_swipe, formlist_url=/formList, password=t3stt3st, protocol=odk_default, navigation=swipe, high_resolution=true, autosend_wifi=true, map_sdk_behavior=google_maps, autosend_network=false, server_url=https://abalobi-fisher.appspot.com, delete_send=false, default_completed=true, username=testcarlusername}";
-        stringFile[1] = "{jump_to=true, show_map_sdk=true, show_splash_screen=true, form_processing_logic=-1, get_blank=true, change_protocol_settings=true, show_map_basemap=true, mark_as_finalized=true, edit_saved=true, change_password=true, access_settings=true, navigation=true, high_resolution=true, save_as=true, change_language=true, delete_saved=true, delete_after_send=true, default_to_finalized=true, change_font_size=true, change_server=true, constraint_behavior=true, autosend_wifi=true, autosend_network=true, send_finalized=true, change_google_account=true, save_mid=true, change_username=true}";
+        setupVariables();
 
         //1. Read the file into an array of objects
         String file = "collect.settings";
@@ -34,13 +39,21 @@ public class Main {
         List<Map<Object, Object>> mapsListFromFile = new ArrayList<Map<Object, Object>>();
 
         //DEBUG - CHECK THE TYPES OF THE VARIABLES
-        typeChecker(collectedSettings);
+//        typeChecker(collectedSettings);
+//        typeChecker(hardCodedSettings);
 
-//        2.1 Inject the username and password into the file object
-        mapsListFromFile = setupODK(collectedSettings, sentOdkUsername, sentOdkPassword);
 
-//        2.2 Do this for hardcoded file instead
-//        mapsListFromFile = setupODK(hardCodedSettings, sentOdkUsername, sentOdkPassword);
+        if (READ_FROM_FILE){
+//            2.1 Inject the username and password into the file object
+            mapsListFromFile = setupODK(collectedSettings, sentOdkUsername, sentOdkPassword);
+        } else{
+//            2.2 Do this for hardcoded file instead
+            mapsListFromFile = setupODK(hardCodedSettings, sentOdkUsername, sentOdkPassword);
+        }
+
+
+
+//
 
         //3. Print out a serialized file
         serializeFile("collect_new.settings", mapsListFromFile);
@@ -250,13 +263,13 @@ public class Main {
 
     }
 
-    private static Map<String,String> convertStringToMap(Object convertMe){
+    private static Map<Object,Object> convertStringToMap(Object convertMe){
         String value = convertMe.toString();
         value = value.substring(1, value.length()-1);
         //remove curly brackets
-        String[] keyValuePairs = value.split(",");              //split the string to creat key-value pairs
+        String[] keyValuePairs = value.split(",");              //split the string to create key-value pairs
 
-        Map<String,String> map = new HashMap<>();
+        Map<Object,Object> map = new HashMap<>();
 
         for(int i = 0; i < keyValuePairs.length; i++)                        //iterate over the pairs
         {
@@ -275,7 +288,7 @@ public class Main {
         return map;
     }
 
-    public static void evaluateArguments(String [] args){
+    private static void evaluateArguments(String [] args){
         argumentsGiven = false;
 
         if (args.length == 2){
@@ -302,6 +315,36 @@ public class Main {
             System.out.println("WARNING: Running program in test mode.\n");
         }
     }
+
+    private static void setupVariables(){
+        stringFile[0] = "{submission_url=/submission, lastVersion=1062, selected_google_account=, firstRun=false, font_size=21, map_basemap_behavior=streets, constraint_behavior=on_swipe, formlist_url=/formList, password=t3stt3st, protocol=odk_default, navigation=swipe, high_resolution=true, autosend_wifi=true, map_sdk_behavior=google_maps, autosend_network=false, server_url=https://abalobi-fisher.appspot.com, delete_send=false, default_completed=true, username=testcarlusername}";
+        stringFile[1] = "{jump_to=true, show_map_sdk=true, show_splash_screen=true, form_processing_logic=-1, get_blank=true, change_protocol_settings=true, show_map_basemap=true, mark_as_finalized=true, edit_saved=true, change_password=true, access_settings=true, navigation=true, high_resolution=true, save_as=true, change_language=true, delete_saved=true, delete_after_send=true, default_to_finalized=true, change_font_size=true, change_server=true, constraint_behavior=true, autosend_wifi=true, autosend_network=true, send_finalized=true, change_google_account=true, save_mid=true, change_username=true}";
+
+        file1Strings = new String[]{"submission_url", "selected_google_account", "font_size", "map_basemap_behavior", "constraint_behavior", "formlist_url", "password", "protocol", "navigation", "map_sdk_behavior", "server_url", "username"};
+        file1Booleans = new String[]{"firstRun", "high_resolution", "autosend_wifi", "autosend_network", "delete_send", "default_completed"};
+        file1Long = new String[]{"lastVersion"};
+
+    }
+
+    private static Object convertToTrueType(int fileNumber, String keyName, Object keyValue){
+        if(fileNumber == 0){
+            //Compare to strings
+            for (String file1String : file1Strings) {
+                if (keyName.toString().equals(file1String)) {
+                    System.out.println("THIS IS A STRING!");
+                    return keyValue.toString();
+                }
+            }
+            for (String file1String : file1Strings) {
+                if (keyName.toString().equals(file1String)) {
+                    return keyValue.toString();
+                }
+            }
+        }
+        return keyValue;
+    }
+
+
 }
 
 
