@@ -40,7 +40,7 @@ public class Main {
 
         //DEBUG - CHECK THE TYPES OF THE VARIABLES
 //        typeChecker(collectedSettings);
-//        typeChecker(hardCodedSettings);
+        typeChecker(hardCodedSettings);
 
 
         if (READ_FROM_FILE){
@@ -216,8 +216,8 @@ public class Main {
 
         // Update the file before serializing again
         // mapsList.get(0).put("username", "carl@test.com");
-//        newMapList.get(0).put("username", "test");
-//        newMapList.get(0).put("password", "t3stt3st");
+        newMapList.get(0).put("username", "test");
+        newMapList.get(0).put("password", "t3stt3st");
 
         if (argumentsGiven){
             newMapList.get(0).put("username", odkUsername);
@@ -277,10 +277,11 @@ public class Main {
             //split the pairs to get key and value
             if (entry.length == 1){
                 //This will happen if there is a null value
-                map.put(entry[0].trim(), "");
+                map.put(entry[0].trim(), convertToTrueType(entry[0].trim(), ""));
             }
             else{
-                map.put(entry[0].trim(), entry[1].trim());
+//                map.put(entry[0].trim(), entry[1].trim());
+                map.put(entry[0].trim(), convertToTrueType(entry[0].trim(), entry[1].trim()));
             }
 
             //add them to the hashmap and trim whitespaces
@@ -324,23 +325,43 @@ public class Main {
         file1Booleans = new String[]{"firstRun", "high_resolution", "autosend_wifi", "autosend_network", "delete_send", "default_completed"};
         file1Long = new String[]{"lastVersion"};
 
+        file2Booleans = new String[]{"jump_to", "show_map_sdk", "show_splash_screen", "get_blank", "change_protocol_settings", "show_map_basemap", "mark_as_finalized", "edit_saved", "change_password", "access_settings", "navigation", "high_resolution", "save_as", "change_language", "delete_saved", "delete_after_send", "default_to_finalized", "change_font_size", "change_server", "constraint_behavior", "autosend_wifi", "autosend_network", "send_finalized", "change_google_account", "save_mid", "change_username"};
+        file2Strings = new String[]{"form_processing_logic"};
     }
 
-    private static Object convertToTrueType(int fileNumber, String keyName, Object keyValue){
-        if(fileNumber == 0){
-            //Compare to strings
-            for (String file1String : file1Strings) {
-                if (keyName.toString().equals(file1String)) {
-                    System.out.println("THIS IS A STRING!");
-                    return keyValue.toString();
-                }
-            }
-            for (String file1String : file1Strings) {
-                if (keyName.toString().equals(file1String)) {
-                    return keyValue.toString();
-                }
+    private static Object convertToTrueType(String keyName, Object keyValue){
+        //Compare to strings
+        for (String file1String : file1Strings) {
+            if (keyName.toString().equals(file1String)) {
+                System.out.println("THIS IS A STRING!");
+                return keyValue.toString();
             }
         }
+        for (String file1Boolean : file1Booleans) {
+            if (keyName.toString().equals(file1Boolean)) {
+                System.out.println("THIS IS A BOOLEAN!");
+                return Boolean.valueOf(keyValue.toString());
+            }
+        }
+        for (String file1Longs : file1Long) {
+            if (keyName.toString().equals(file1Longs)) {
+                System.out.println("THIS IS A LONG!");
+                return Long.parseLong(keyValue.toString());
+            }
+        }
+        for (String file2String : file2Strings) {
+            if (keyName.toString().equals(file2String)) {
+                System.out.println("THIS IS A STRING 2!");
+                return (keyValue.toString());
+            }
+        }
+        for (String file2Boolean : file2Booleans) {
+            if (keyName.toString().equals(file2Boolean)) {
+                System.out.println("THIS IS A BOOLEAN 2!");
+                return Boolean.valueOf(keyValue.toString());
+            }
+        }
+
         return keyValue;
     }
 

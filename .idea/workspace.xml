@@ -40,8 +40,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-360">
-              <caret line="290" column="57" selection-start-line="290" selection-start-column="57" selection-end-line="290" selection-end-column="57" />
+            <state relative-caret-position="357">
+              <caret line="189" column="5" selection-start-line="189" selection-start-column="5" selection-end-line="189" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1325#1346#0" expanded="true" />
@@ -53,10 +53,13 @@
                 <element signature="method#getAlternateDataStream#0;class#Main#0" expanded="false" />
                 <element signature="method#streamToFile#0;class#Main#0" expanded="false" />
                 <element signature="method#setupODK#0;class#Main#0" expanded="false" />
-                <element signature="e#7004#7025#0" expanded="true" />
+                <element signature="e#7002#7023#0" expanded="true" />
                 <element signature="method#typeChecker#0;class#Main#0" expanded="false" />
-                <element signature="e#8440#8461#0" expanded="true" />
+                <element signature="e#8434#8455#0" expanded="true" />
+                <element signature="method#convertStringToMap#0;class#Main#0" expanded="false" />
                 <element signature="method#evaluateArguments#0;class#Main#0" expanded="false" />
+                <element signature="method#setupVariables#0;class#Main#0" expanded="false" />
+                <element signature="method#convertToTrueType#0;class#Main#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -582,10 +585,13 @@
             <element signature="method#getAlternateDataStream#0;class#Main#0" expanded="false" />
             <element signature="method#streamToFile#0;class#Main#0" expanded="false" />
             <element signature="method#setupODK#0;class#Main#0" expanded="false" />
-            <element signature="e#7004#7025#0" expanded="true" />
+            <element signature="e#7002#7023#0" expanded="true" />
             <element signature="method#typeChecker#0;class#Main#0" expanded="false" />
-            <element signature="e#8440#8461#0" expanded="true" />
+            <element signature="e#8434#8455#0" expanded="true" />
+            <element signature="method#convertStringToMap#0;class#Main#0" expanded="false" />
             <element signature="method#evaluateArguments#0;class#Main#0" expanded="false" />
+            <element signature="method#setupVariables#0;class#Main#0" expanded="false" />
+            <element signature="method#convertToTrueType#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -635,10 +641,13 @@
             <element signature="method#getAlternateDataStream#0;class#Main#0" expanded="false" />
             <element signature="method#streamToFile#0;class#Main#0" expanded="false" />
             <element signature="method#setupODK#0;class#Main#0" expanded="false" />
-            <element signature="e#7004#7025#0" expanded="true" />
+            <element signature="e#7002#7023#0" expanded="true" />
             <element signature="method#typeChecker#0;class#Main#0" expanded="false" />
-            <element signature="e#8440#8461#0" expanded="true" />
+            <element signature="e#8434#8455#0" expanded="true" />
+            <element signature="method#convertStringToMap#0;class#Main#0" expanded="false" />
             <element signature="method#evaluateArguments#0;class#Main#0" expanded="false" />
+            <element signature="method#setupVariables#0;class#Main#0" expanded="false" />
+            <element signature="method#convertToTrueType#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -688,10 +697,13 @@
             <element signature="method#getAlternateDataStream#0;class#Main#0" expanded="false" />
             <element signature="method#streamToFile#0;class#Main#0" expanded="false" />
             <element signature="method#setupODK#0;class#Main#0" expanded="false" />
-            <element signature="e#7004#7025#0" expanded="true" />
+            <element signature="e#7002#7023#0" expanded="true" />
             <element signature="method#typeChecker#0;class#Main#0" expanded="false" />
-            <element signature="e#8440#8461#0" expanded="true" />
+            <element signature="e#8434#8455#0" expanded="true" />
+            <element signature="method#convertStringToMap#0;class#Main#0" expanded="false" />
             <element signature="method#evaluateArguments#0;class#Main#0" expanded="false" />
+            <element signature="method#setupVariables#0;class#Main#0" expanded="false" />
+            <element signature="method#convertToTrueType#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -741,10 +753,13 @@
             <element signature="method#getAlternateDataStream#0;class#Main#0" expanded="false" />
             <element signature="method#streamToFile#0;class#Main#0" expanded="false" />
             <element signature="method#setupODK#0;class#Main#0" expanded="false" />
-            <element signature="e#7004#7025#0" expanded="true" />
+            <element signature="e#7002#7023#0" expanded="true" />
             <element signature="method#typeChecker#0;class#Main#0" expanded="false" />
-            <element signature="e#8440#8461#0" expanded="true" />
+            <element signature="e#8434#8455#0" expanded="true" />
+            <element signature="method#convertStringToMap#0;class#Main#0" expanded="false" />
             <element signature="method#evaluateArguments#0;class#Main#0" expanded="false" />
+            <element signature="method#setupVariables#0;class#Main#0" expanded="false" />
+            <element signature="method#convertToTrueType#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -786,10 +801,13 @@
             <element signature="method#getAlternateDataStream#0;class#Main#0" expanded="false" />
             <element signature="method#streamToFile#0;class#Main#0" expanded="false" />
             <element signature="method#setupODK#0;class#Main#0" expanded="false" />
-            <element signature="e#7004#7025#0" expanded="true" />
+            <element signature="e#7002#7023#0" expanded="true" />
             <element signature="method#typeChecker#0;class#Main#0" expanded="false" />
-            <element signature="e#8440#8461#0" expanded="true" />
+            <element signature="e#8434#8455#0" expanded="true" />
+            <element signature="method#convertStringToMap#0;class#Main#0" expanded="false" />
             <element signature="method#evaluateArguments#0;class#Main#0" expanded="false" />
+            <element signature="method#setupVariables#0;class#Main#0" expanded="false" />
+            <element signature="method#convertToTrueType#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -831,10 +849,13 @@
             <element signature="method#getAlternateDataStream#0;class#Main#0" expanded="false" />
             <element signature="method#streamToFile#0;class#Main#0" expanded="false" />
             <element signature="method#setupODK#0;class#Main#0" expanded="false" />
-            <element signature="e#7004#7025#0" expanded="true" />
+            <element signature="e#7002#7023#0" expanded="true" />
             <element signature="method#typeChecker#0;class#Main#0" expanded="false" />
-            <element signature="e#8440#8461#0" expanded="true" />
+            <element signature="e#8434#8455#0" expanded="true" />
+            <element signature="method#convertStringToMap#0;class#Main#0" expanded="false" />
             <element signature="method#evaluateArguments#0;class#Main#0" expanded="false" />
+            <element signature="method#setupVariables#0;class#Main#0" expanded="false" />
+            <element signature="method#convertToTrueType#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -862,10 +883,13 @@
             <element signature="method#getAlternateDataStream#0;class#Main#0" expanded="false" />
             <element signature="method#streamToFile#0;class#Main#0" expanded="false" />
             <element signature="method#setupODK#0;class#Main#0" expanded="false" />
-            <element signature="e#7004#7025#0" expanded="true" />
+            <element signature="e#7002#7023#0" expanded="true" />
             <element signature="method#typeChecker#0;class#Main#0" expanded="false" />
-            <element signature="e#8440#8461#0" expanded="true" />
+            <element signature="e#8434#8455#0" expanded="true" />
+            <element signature="method#convertStringToMap#0;class#Main#0" expanded="false" />
             <element signature="method#evaluateArguments#0;class#Main#0" expanded="false" />
+            <element signature="method#setupVariables#0;class#Main#0" expanded="false" />
+            <element signature="method#convertToTrueType#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -893,10 +917,13 @@
             <element signature="method#getAlternateDataStream#0;class#Main#0" expanded="false" />
             <element signature="method#streamToFile#0;class#Main#0" expanded="false" />
             <element signature="method#setupODK#0;class#Main#0" expanded="false" />
-            <element signature="e#7004#7025#0" expanded="true" />
+            <element signature="e#7002#7023#0" expanded="true" />
             <element signature="method#typeChecker#0;class#Main#0" expanded="false" />
-            <element signature="e#8440#8461#0" expanded="true" />
+            <element signature="e#8434#8455#0" expanded="true" />
+            <element signature="method#convertStringToMap#0;class#Main#0" expanded="false" />
             <element signature="method#evaluateArguments#0;class#Main#0" expanded="false" />
+            <element signature="method#setupVariables#0;class#Main#0" expanded="false" />
+            <element signature="method#convertToTrueType#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -916,10 +943,13 @@
             <element signature="method#getAlternateDataStream#0;class#Main#0" expanded="false" />
             <element signature="method#streamToFile#0;class#Main#0" expanded="false" />
             <element signature="method#setupODK#0;class#Main#0" expanded="false" />
-            <element signature="e#7004#7025#0" expanded="true" />
+            <element signature="e#7002#7023#0" expanded="true" />
             <element signature="method#typeChecker#0;class#Main#0" expanded="false" />
-            <element signature="e#8440#8461#0" expanded="true" />
+            <element signature="e#8434#8455#0" expanded="true" />
+            <element signature="method#convertStringToMap#0;class#Main#0" expanded="false" />
             <element signature="method#evaluateArguments#0;class#Main#0" expanded="false" />
+            <element signature="method#setupVariables#0;class#Main#0" expanded="false" />
+            <element signature="method#convertToTrueType#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -997,8 +1027,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-360">
-          <caret line="290" column="57" selection-start-line="290" selection-start-column="57" selection-end-line="290" selection-end-column="57" />
+        <state relative-caret-position="357">
+          <caret line="189" column="5" selection-start-line="189" selection-start-column="5" selection-end-line="189" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1325#1346#0" expanded="true" />
@@ -1010,10 +1040,13 @@
             <element signature="method#getAlternateDataStream#0;class#Main#0" expanded="false" />
             <element signature="method#streamToFile#0;class#Main#0" expanded="false" />
             <element signature="method#setupODK#0;class#Main#0" expanded="false" />
-            <element signature="e#7004#7025#0" expanded="true" />
+            <element signature="e#7002#7023#0" expanded="true" />
             <element signature="method#typeChecker#0;class#Main#0" expanded="false" />
-            <element signature="e#8440#8461#0" expanded="true" />
+            <element signature="e#8434#8455#0" expanded="true" />
+            <element signature="method#convertStringToMap#0;class#Main#0" expanded="false" />
             <element signature="method#evaluateArguments#0;class#Main#0" expanded="false" />
+            <element signature="method#setupVariables#0;class#Main#0" expanded="false" />
+            <element signature="method#convertToTrueType#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
