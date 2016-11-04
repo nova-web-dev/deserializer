@@ -21,6 +21,8 @@ public class Main {
     private static String[] file2Booleans;
     private static String[] file2Long;
 
+    private static int fileCompareIterator = 0;
+
 
     public static void main(String[] args) {
 
@@ -57,6 +59,8 @@ public class Main {
 
         //3. Print out a serialized file
         serializeFile("collect_new.settings", mapsListFromFile);
+
+        System.out.println(mapsListFromFile);
 
         //3.1 Alternatively, create a method to send a base64 version of serialized file as a string somewhere else
 
@@ -150,6 +154,11 @@ public class Main {
         for (int i = 0; i < timesToRun; i++){
             tempObj[i] = convertStringToMap(input[i]);
             System.out.println(tempObj[i]);
+
+            if (fileCompareIterator < 1){
+                fileCompareIterator++;
+            }
+
         }
 
         return tempObj;
@@ -254,8 +263,15 @@ public class Main {
             System.out.println("");
             Iterator it = newMapList2.get(i).entrySet().iterator();
             while (it.hasNext()) {
+
                 Map.Entry pair = (Map.Entry)it.next();
-                System.out.println(pair.getKey() + " = " + pair.getValue().getClass());
+                try{
+                    System.out.println(pair.getKey() + " = " + pair.getValue().getClass());
+                }
+                catch (Exception ex){
+                    System.out.println("\nThere was a problem getting the type of " + pair.getKey() + "!\n" + ex);
+                }
+
 //                it.remove(); // avoids a ConcurrentModificationException
             }
             System.out.println("");
@@ -277,7 +293,7 @@ public class Main {
             //split the pairs to get key and value
             if (entry.length == 1){
                 //This will happen if there is a null value
-                map.put(entry[0].trim(), convertToTrueType(entry[0].trim(), ""));
+                map.put(entry[0].trim(), "");
             }
             else{
 //                map.put(entry[0].trim(), entry[1].trim());
@@ -330,38 +346,40 @@ public class Main {
     }
 
     private static Object convertToTrueType(String keyName, Object keyValue){
-        //Compare to strings
-        for (String file1String : file1Strings) {
-            if (keyName.toString().equals(file1String)) {
-                System.out.println("THIS IS A STRING!");
-                return keyValue.toString();
+        if (fileCompareIterator == 0){
+            for (String file1String : file1Strings) {
+                if (keyName.toString().equals(file1String)) {
+//                System.out.println("THIS IS A STRING!");
+                    return keyValue.toString();
+                }
+            }
+            for (String file1Boolean : file1Booleans) {
+                if (keyName.toString().equals(file1Boolean)) {
+//                System.out.println("THIS IS A BOOLEAN!");
+                    return Boolean.parseBoolean(keyValue.toString());
+                }
+            }
+            for (String file1Longs : file1Long) {
+                if (keyName.toString().equals(file1Longs)) {
+//                System.out.println("THIS IS A LONG!");
+                    return Long.parseLong(keyValue.toString());
+                }
             }
         }
-        for (String file1Boolean : file1Booleans) {
-            if (keyName.toString().equals(file1Boolean)) {
-                System.out.println("THIS IS A BOOLEAN!");
-                return Boolean.valueOf(keyValue.toString());
+        if (fileCompareIterator ==1){
+            for (String file2String : file2Strings) {
+                if (keyName.toString().equals(file2String)) {
+//                System.out.println("THIS IS A STRING 2!");
+                    return (keyValue.toString());
+                }
+            }
+            for (String file2Boolean : file2Booleans) {
+                if (keyName.toString().equals(file2Boolean)) {
+//                System.out.println("THIS IS A BOOLEAN 2!");
+                    return Boolean.parseBoolean(keyValue.toString());
+                }
             }
         }
-        for (String file1Longs : file1Long) {
-            if (keyName.toString().equals(file1Longs)) {
-                System.out.println("THIS IS A LONG!");
-                return Long.parseLong(keyValue.toString());
-            }
-        }
-        for (String file2String : file2Strings) {
-            if (keyName.toString().equals(file2String)) {
-                System.out.println("THIS IS A STRING 2!");
-                return (keyValue.toString());
-            }
-        }
-        for (String file2Boolean : file2Booleans) {
-            if (keyName.toString().equals(file2Boolean)) {
-                System.out.println("THIS IS A BOOLEAN 2!");
-                return Boolean.valueOf(keyValue.toString());
-            }
-        }
-
         return keyValue;
     }
 
