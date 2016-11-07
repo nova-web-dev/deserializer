@@ -40,26 +40,23 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="718">
-              <caret line="406" column="3" selection-start-line="406" selection-start-column="3" selection-end-line="406" selection-end-column="3" />
+            <state relative-caret-position="210">
+              <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1374#1395#0" expanded="true" />
-                <element signature="method#deserializeFile#0;class#Main#0" expanded="false" />
-                <element signature="method#serializeFile#0;class#Main#0" expanded="false" />
-                <element signature="method#fileToObject#0;class#Main#0" expanded="false" />
-                <element signature="method#stringArrayToObject#0;class#Main#0" expanded="false" />
-                <element signature="method#printMap#0;class#Main#0" expanded="false" />
-                <element signature="method#getAlternateDataStream#0;class#Main#0" expanded="false" />
-                <element signature="method#streamToFile#0;class#Main#0" expanded="false" />
-                <element signature="method#setupODK#0;class#Main#0" expanded="false" />
-                <element signature="e#7195#7216#0" expanded="true" />
-                <element signature="method#typeChecker#0;class#Main#0" expanded="false" />
-                <element signature="e#8627#8648#0" expanded="true" />
-                <element signature="method#convertStringToMap#0;class#Main#0" expanded="false" />
                 <element signature="method#evaluateArguments#0;class#Main#0" expanded="false" />
                 <element signature="method#setupVariables#0;class#Main#0" expanded="false" />
+                <element signature="method#deserializeFile#0;class#Main#0" expanded="false" />
+                <element signature="method#setupODK#0;class#Main#0" expanded="false" />
+                <element signature="method#fileToObject#0;class#Main#0" expanded="false" />
+                <element signature="method#stringArrayToObject#0;class#Main#0" expanded="false" />
+                <element signature="method#typeChecker#0;class#Main#0" expanded="false" />
                 <element signature="method#convertToTrueType#0;class#Main#0" expanded="false" />
+                <element signature="method#convertStringToMap#0;class#Main#0" expanded="false" />
+                <element signature="method#printMap#0;class#Main#0" expanded="false" />
+                <element signature="method#printMapsList#0;class#Main#0" expanded="false" />
+                <element signature="method#getAlternateDataStream#0;class#Main#0" expanded="false" />
+                <element signature="method#streamToFile#0;class#Main#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -94,8 +91,8 @@
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+            <state relative-caret-position="63">
+              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -160,6 +157,24 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches">
+        <subPane />
+      </pane>
+      <pane id="PackagesPane">
+        <subPane />
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Problems" />
+        <subPane subId="Production">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+        <subPane subId="Tests" />
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -193,24 +208,6 @@
             </PATH_ELEMENT>
           </PATH>
         </subPane>
-      </pane>
-      <pane id="PackagesPane">
-        <subPane />
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Problems" />
-        <subPane subId="Production">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-        <subPane subId="Tests" />
-      </pane>
-      <pane id="Scratches">
-        <subPane />
       </pane>
     </panes>
   </component>
@@ -528,7 +525,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.50416666" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31174535" sideWeight="0.49583334" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31174535" sideWeight="0.49583334" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -561,7 +558,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="26" />
+      <option name="time" value="27" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -576,22 +573,125 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1374#1395#0" expanded="true" />
-            <element signature="method#deserializeFile#0;class#Main#0" expanded="false" />
-            <element signature="method#serializeFile#0;class#Main#0" expanded="false" />
-            <element signature="method#fileToObject#0;class#Main#0" expanded="false" />
-            <element signature="method#stringArrayToObject#0;class#Main#0" expanded="false" />
-            <element signature="method#printMap#0;class#Main#0" expanded="false" />
-            <element signature="method#getAlternateDataStream#0;class#Main#0" expanded="false" />
-            <element signature="method#streamToFile#0;class#Main#0" expanded="false" />
-            <element signature="method#setupODK#0;class#Main#0" expanded="false" />
-            <element signature="e#7195#7216#0" expanded="true" />
-            <element signature="method#typeChecker#0;class#Main#0" expanded="false" />
-            <element signature="e#8627#8648#0" expanded="true" />
-            <element signature="method#convertStringToMap#0;class#Main#0" expanded="false" />
             <element signature="method#evaluateArguments#0;class#Main#0" expanded="false" />
             <element signature="method#setupVariables#0;class#Main#0" expanded="false" />
+            <element signature="method#deserializeFile#0;class#Main#0" expanded="false" />
+            <element signature="method#setupODK#0;class#Main#0" expanded="false" />
+            <element signature="method#fileToObject#0;class#Main#0" expanded="false" />
+            <element signature="method#stringArrayToObject#0;class#Main#0" expanded="false" />
+            <element signature="method#typeChecker#0;class#Main#0" expanded="false" />
             <element signature="method#convertToTrueType#0;class#Main#0" expanded="false" />
+            <element signature="method#convertStringToMap#0;class#Main#0" expanded="false" />
+            <element signature="method#printMap#0;class#Main#0" expanded="false" />
+            <element signature="method#printMapsList#0;class#Main#0" expanded="false" />
+            <element signature="method#getAlternateDataStream#0;class#Main#0" expanded="false" />
+            <element signature="method#streamToFile#0;class#Main#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UnusedMethods.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="294">
+            <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#evaluateArguments#0;class#Main#0" expanded="false" />
+            <element signature="method#setupVariables#0;class#Main#0" expanded="false" />
+            <element signature="method#deserializeFile#0;class#Main#0" expanded="false" />
+            <element signature="method#setupODK#0;class#Main#0" expanded="false" />
+            <element signature="method#fileToObject#0;class#Main#0" expanded="false" />
+            <element signature="method#stringArrayToObject#0;class#Main#0" expanded="false" />
+            <element signature="method#typeChecker#0;class#Main#0" expanded="false" />
+            <element signature="method#convertToTrueType#0;class#Main#0" expanded="false" />
+            <element signature="method#convertStringToMap#0;class#Main#0" expanded="false" />
+            <element signature="method#printMap#0;class#Main#0" expanded="false" />
+            <element signature="method#printMapsList#0;class#Main#0" expanded="false" />
+            <element signature="method#getAlternateDataStream#0;class#Main#0" expanded="false" />
+            <element signature="method#streamToFile#0;class#Main#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UnusedMethods.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="294">
+            <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#evaluateArguments#0;class#Main#0" expanded="false" />
+            <element signature="method#setupVariables#0;class#Main#0" expanded="false" />
+            <element signature="method#deserializeFile#0;class#Main#0" expanded="false" />
+            <element signature="method#setupODK#0;class#Main#0" expanded="false" />
+            <element signature="method#fileToObject#0;class#Main#0" expanded="false" />
+            <element signature="method#stringArrayToObject#0;class#Main#0" expanded="false" />
+            <element signature="method#typeChecker#0;class#Main#0" expanded="false" />
+            <element signature="method#convertToTrueType#0;class#Main#0" expanded="false" />
+            <element signature="method#convertStringToMap#0;class#Main#0" expanded="false" />
+            <element signature="method#printMap#0;class#Main#0" expanded="false" />
+            <element signature="method#printMapsList#0;class#Main#0" expanded="false" />
+            <element signature="method#getAlternateDataStream#0;class#Main#0" expanded="false" />
+            <element signature="method#streamToFile#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -632,22 +732,19 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1374#1395#0" expanded="true" />
-            <element signature="method#deserializeFile#0;class#Main#0" expanded="false" />
-            <element signature="method#serializeFile#0;class#Main#0" expanded="false" />
-            <element signature="method#fileToObject#0;class#Main#0" expanded="false" />
-            <element signature="method#stringArrayToObject#0;class#Main#0" expanded="false" />
-            <element signature="method#printMap#0;class#Main#0" expanded="false" />
-            <element signature="method#getAlternateDataStream#0;class#Main#0" expanded="false" />
-            <element signature="method#streamToFile#0;class#Main#0" expanded="false" />
-            <element signature="method#setupODK#0;class#Main#0" expanded="false" />
-            <element signature="e#7195#7216#0" expanded="true" />
-            <element signature="method#typeChecker#0;class#Main#0" expanded="false" />
-            <element signature="e#8627#8648#0" expanded="true" />
-            <element signature="method#convertStringToMap#0;class#Main#0" expanded="false" />
             <element signature="method#evaluateArguments#0;class#Main#0" expanded="false" />
             <element signature="method#setupVariables#0;class#Main#0" expanded="false" />
+            <element signature="method#deserializeFile#0;class#Main#0" expanded="false" />
+            <element signature="method#setupODK#0;class#Main#0" expanded="false" />
+            <element signature="method#fileToObject#0;class#Main#0" expanded="false" />
+            <element signature="method#stringArrayToObject#0;class#Main#0" expanded="false" />
+            <element signature="method#typeChecker#0;class#Main#0" expanded="false" />
             <element signature="method#convertToTrueType#0;class#Main#0" expanded="false" />
+            <element signature="method#convertStringToMap#0;class#Main#0" expanded="false" />
+            <element signature="method#printMap#0;class#Main#0" expanded="false" />
+            <element signature="method#printMapsList#0;class#Main#0" expanded="false" />
+            <element signature="method#getAlternateDataStream#0;class#Main#0" expanded="false" />
+            <element signature="method#streamToFile#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -688,22 +785,19 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1374#1395#0" expanded="true" />
-            <element signature="method#deserializeFile#0;class#Main#0" expanded="false" />
-            <element signature="method#serializeFile#0;class#Main#0" expanded="false" />
-            <element signature="method#fileToObject#0;class#Main#0" expanded="false" />
-            <element signature="method#stringArrayToObject#0;class#Main#0" expanded="false" />
-            <element signature="method#printMap#0;class#Main#0" expanded="false" />
-            <element signature="method#getAlternateDataStream#0;class#Main#0" expanded="false" />
-            <element signature="method#streamToFile#0;class#Main#0" expanded="false" />
-            <element signature="method#setupODK#0;class#Main#0" expanded="false" />
-            <element signature="e#7195#7216#0" expanded="true" />
-            <element signature="method#typeChecker#0;class#Main#0" expanded="false" />
-            <element signature="e#8627#8648#0" expanded="true" />
-            <element signature="method#convertStringToMap#0;class#Main#0" expanded="false" />
             <element signature="method#evaluateArguments#0;class#Main#0" expanded="false" />
             <element signature="method#setupVariables#0;class#Main#0" expanded="false" />
+            <element signature="method#deserializeFile#0;class#Main#0" expanded="false" />
+            <element signature="method#setupODK#0;class#Main#0" expanded="false" />
+            <element signature="method#fileToObject#0;class#Main#0" expanded="false" />
+            <element signature="method#stringArrayToObject#0;class#Main#0" expanded="false" />
+            <element signature="method#typeChecker#0;class#Main#0" expanded="false" />
             <element signature="method#convertToTrueType#0;class#Main#0" expanded="false" />
+            <element signature="method#convertStringToMap#0;class#Main#0" expanded="false" />
+            <element signature="method#printMap#0;class#Main#0" expanded="false" />
+            <element signature="method#printMapsList#0;class#Main#0" expanded="false" />
+            <element signature="method#getAlternateDataStream#0;class#Main#0" expanded="false" />
+            <element signature="method#streamToFile#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -744,22 +838,19 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1374#1395#0" expanded="true" />
-            <element signature="method#deserializeFile#0;class#Main#0" expanded="false" />
-            <element signature="method#serializeFile#0;class#Main#0" expanded="false" />
-            <element signature="method#fileToObject#0;class#Main#0" expanded="false" />
-            <element signature="method#stringArrayToObject#0;class#Main#0" expanded="false" />
-            <element signature="method#printMap#0;class#Main#0" expanded="false" />
-            <element signature="method#getAlternateDataStream#0;class#Main#0" expanded="false" />
-            <element signature="method#streamToFile#0;class#Main#0" expanded="false" />
-            <element signature="method#setupODK#0;class#Main#0" expanded="false" />
-            <element signature="e#7195#7216#0" expanded="true" />
-            <element signature="method#typeChecker#0;class#Main#0" expanded="false" />
-            <element signature="e#8627#8648#0" expanded="true" />
-            <element signature="method#convertStringToMap#0;class#Main#0" expanded="false" />
             <element signature="method#evaluateArguments#0;class#Main#0" expanded="false" />
             <element signature="method#setupVariables#0;class#Main#0" expanded="false" />
+            <element signature="method#deserializeFile#0;class#Main#0" expanded="false" />
+            <element signature="method#setupODK#0;class#Main#0" expanded="false" />
+            <element signature="method#fileToObject#0;class#Main#0" expanded="false" />
+            <element signature="method#stringArrayToObject#0;class#Main#0" expanded="false" />
+            <element signature="method#typeChecker#0;class#Main#0" expanded="false" />
             <element signature="method#convertToTrueType#0;class#Main#0" expanded="false" />
+            <element signature="method#convertStringToMap#0;class#Main#0" expanded="false" />
+            <element signature="method#printMap#0;class#Main#0" expanded="false" />
+            <element signature="method#printMapsList#0;class#Main#0" expanded="false" />
+            <element signature="method#getAlternateDataStream#0;class#Main#0" expanded="false" />
+            <element signature="method#streamToFile#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -792,22 +883,19 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1374#1395#0" expanded="true" />
-            <element signature="method#deserializeFile#0;class#Main#0" expanded="false" />
-            <element signature="method#serializeFile#0;class#Main#0" expanded="false" />
-            <element signature="method#fileToObject#0;class#Main#0" expanded="false" />
-            <element signature="method#stringArrayToObject#0;class#Main#0" expanded="false" />
-            <element signature="method#printMap#0;class#Main#0" expanded="false" />
-            <element signature="method#getAlternateDataStream#0;class#Main#0" expanded="false" />
-            <element signature="method#streamToFile#0;class#Main#0" expanded="false" />
-            <element signature="method#setupODK#0;class#Main#0" expanded="false" />
-            <element signature="e#7195#7216#0" expanded="true" />
-            <element signature="method#typeChecker#0;class#Main#0" expanded="false" />
-            <element signature="e#8627#8648#0" expanded="true" />
-            <element signature="method#convertStringToMap#0;class#Main#0" expanded="false" />
             <element signature="method#evaluateArguments#0;class#Main#0" expanded="false" />
             <element signature="method#setupVariables#0;class#Main#0" expanded="false" />
+            <element signature="method#deserializeFile#0;class#Main#0" expanded="false" />
+            <element signature="method#setupODK#0;class#Main#0" expanded="false" />
+            <element signature="method#fileToObject#0;class#Main#0" expanded="false" />
+            <element signature="method#stringArrayToObject#0;class#Main#0" expanded="false" />
+            <element signature="method#typeChecker#0;class#Main#0" expanded="false" />
             <element signature="method#convertToTrueType#0;class#Main#0" expanded="false" />
+            <element signature="method#convertStringToMap#0;class#Main#0" expanded="false" />
+            <element signature="method#printMap#0;class#Main#0" expanded="false" />
+            <element signature="method#printMapsList#0;class#Main#0" expanded="false" />
+            <element signature="method#getAlternateDataStream#0;class#Main#0" expanded="false" />
+            <element signature="method#streamToFile#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -840,22 +928,19 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1374#1395#0" expanded="true" />
-            <element signature="method#deserializeFile#0;class#Main#0" expanded="false" />
-            <element signature="method#serializeFile#0;class#Main#0" expanded="false" />
-            <element signature="method#fileToObject#0;class#Main#0" expanded="false" />
-            <element signature="method#stringArrayToObject#0;class#Main#0" expanded="false" />
-            <element signature="method#printMap#0;class#Main#0" expanded="false" />
-            <element signature="method#getAlternateDataStream#0;class#Main#0" expanded="false" />
-            <element signature="method#streamToFile#0;class#Main#0" expanded="false" />
-            <element signature="method#setupODK#0;class#Main#0" expanded="false" />
-            <element signature="e#7195#7216#0" expanded="true" />
-            <element signature="method#typeChecker#0;class#Main#0" expanded="false" />
-            <element signature="e#8627#8648#0" expanded="true" />
-            <element signature="method#convertStringToMap#0;class#Main#0" expanded="false" />
             <element signature="method#evaluateArguments#0;class#Main#0" expanded="false" />
             <element signature="method#setupVariables#0;class#Main#0" expanded="false" />
+            <element signature="method#deserializeFile#0;class#Main#0" expanded="false" />
+            <element signature="method#setupODK#0;class#Main#0" expanded="false" />
+            <element signature="method#fileToObject#0;class#Main#0" expanded="false" />
+            <element signature="method#stringArrayToObject#0;class#Main#0" expanded="false" />
+            <element signature="method#typeChecker#0;class#Main#0" expanded="false" />
             <element signature="method#convertToTrueType#0;class#Main#0" expanded="false" />
+            <element signature="method#convertStringToMap#0;class#Main#0" expanded="false" />
+            <element signature="method#printMap#0;class#Main#0" expanded="false" />
+            <element signature="method#printMapsList#0;class#Main#0" expanded="false" />
+            <element signature="method#getAlternateDataStream#0;class#Main#0" expanded="false" />
+            <element signature="method#streamToFile#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -874,22 +959,19 @@
           <caret line="16" column="51" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1374#1395#0" expanded="true" />
-            <element signature="method#deserializeFile#0;class#Main#0" expanded="false" />
-            <element signature="method#serializeFile#0;class#Main#0" expanded="false" />
-            <element signature="method#fileToObject#0;class#Main#0" expanded="false" />
-            <element signature="method#stringArrayToObject#0;class#Main#0" expanded="false" />
-            <element signature="method#printMap#0;class#Main#0" expanded="false" />
-            <element signature="method#getAlternateDataStream#0;class#Main#0" expanded="false" />
-            <element signature="method#streamToFile#0;class#Main#0" expanded="false" />
-            <element signature="method#setupODK#0;class#Main#0" expanded="false" />
-            <element signature="e#7195#7216#0" expanded="true" />
-            <element signature="method#typeChecker#0;class#Main#0" expanded="false" />
-            <element signature="e#8627#8648#0" expanded="true" />
-            <element signature="method#convertStringToMap#0;class#Main#0" expanded="false" />
             <element signature="method#evaluateArguments#0;class#Main#0" expanded="false" />
             <element signature="method#setupVariables#0;class#Main#0" expanded="false" />
+            <element signature="method#deserializeFile#0;class#Main#0" expanded="false" />
+            <element signature="method#setupODK#0;class#Main#0" expanded="false" />
+            <element signature="method#fileToObject#0;class#Main#0" expanded="false" />
+            <element signature="method#stringArrayToObject#0;class#Main#0" expanded="false" />
+            <element signature="method#typeChecker#0;class#Main#0" expanded="false" />
             <element signature="method#convertToTrueType#0;class#Main#0" expanded="false" />
+            <element signature="method#convertStringToMap#0;class#Main#0" expanded="false" />
+            <element signature="method#printMap#0;class#Main#0" expanded="false" />
+            <element signature="method#printMapsList#0;class#Main#0" expanded="false" />
+            <element signature="method#getAlternateDataStream#0;class#Main#0" expanded="false" />
+            <element signature="method#streamToFile#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -908,22 +990,19 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1374#1395#0" expanded="true" />
-            <element signature="method#deserializeFile#0;class#Main#0" expanded="false" />
-            <element signature="method#serializeFile#0;class#Main#0" expanded="false" />
-            <element signature="method#fileToObject#0;class#Main#0" expanded="false" />
-            <element signature="method#stringArrayToObject#0;class#Main#0" expanded="false" />
-            <element signature="method#printMap#0;class#Main#0" expanded="false" />
-            <element signature="method#getAlternateDataStream#0;class#Main#0" expanded="false" />
-            <element signature="method#streamToFile#0;class#Main#0" expanded="false" />
-            <element signature="method#setupODK#0;class#Main#0" expanded="false" />
-            <element signature="e#7195#7216#0" expanded="true" />
-            <element signature="method#typeChecker#0;class#Main#0" expanded="false" />
-            <element signature="e#8627#8648#0" expanded="true" />
-            <element signature="method#convertStringToMap#0;class#Main#0" expanded="false" />
             <element signature="method#evaluateArguments#0;class#Main#0" expanded="false" />
             <element signature="method#setupVariables#0;class#Main#0" expanded="false" />
+            <element signature="method#deserializeFile#0;class#Main#0" expanded="false" />
+            <element signature="method#setupODK#0;class#Main#0" expanded="false" />
+            <element signature="method#fileToObject#0;class#Main#0" expanded="false" />
+            <element signature="method#stringArrayToObject#0;class#Main#0" expanded="false" />
+            <element signature="method#typeChecker#0;class#Main#0" expanded="false" />
             <element signature="method#convertToTrueType#0;class#Main#0" expanded="false" />
+            <element signature="method#convertStringToMap#0;class#Main#0" expanded="false" />
+            <element signature="method#printMap#0;class#Main#0" expanded="false" />
+            <element signature="method#printMapsList#0;class#Main#0" expanded="false" />
+            <element signature="method#getAlternateDataStream#0;class#Main#0" expanded="false" />
+            <element signature="method#streamToFile#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -934,22 +1013,19 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1374#1395#0" expanded="true" />
-            <element signature="method#deserializeFile#0;class#Main#0" expanded="false" />
-            <element signature="method#serializeFile#0;class#Main#0" expanded="false" />
-            <element signature="method#fileToObject#0;class#Main#0" expanded="false" />
-            <element signature="method#stringArrayToObject#0;class#Main#0" expanded="false" />
-            <element signature="method#printMap#0;class#Main#0" expanded="false" />
-            <element signature="method#getAlternateDataStream#0;class#Main#0" expanded="false" />
-            <element signature="method#streamToFile#0;class#Main#0" expanded="false" />
-            <element signature="method#setupODK#0;class#Main#0" expanded="false" />
-            <element signature="e#7195#7216#0" expanded="true" />
-            <element signature="method#typeChecker#0;class#Main#0" expanded="false" />
-            <element signature="e#8627#8648#0" expanded="true" />
-            <element signature="method#convertStringToMap#0;class#Main#0" expanded="false" />
             <element signature="method#evaluateArguments#0;class#Main#0" expanded="false" />
             <element signature="method#setupVariables#0;class#Main#0" expanded="false" />
+            <element signature="method#deserializeFile#0;class#Main#0" expanded="false" />
+            <element signature="method#setupODK#0;class#Main#0" expanded="false" />
+            <element signature="method#fileToObject#0;class#Main#0" expanded="false" />
+            <element signature="method#stringArrayToObject#0;class#Main#0" expanded="false" />
+            <element signature="method#typeChecker#0;class#Main#0" expanded="false" />
             <element signature="method#convertToTrueType#0;class#Main#0" expanded="false" />
+            <element signature="method#convertStringToMap#0;class#Main#0" expanded="false" />
+            <element signature="method#printMap#0;class#Main#0" expanded="false" />
+            <element signature="method#printMapsList#0;class#Main#0" expanded="false" />
+            <element signature="method#getAlternateDataStream#0;class#Main#0" expanded="false" />
+            <element signature="method#streamToFile#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -963,8 +1039,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        <state relative-caret-position="63">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1014,7 +1090,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1755">
           <caret line="207" column="13" selection-start-line="207" selection-start-column="13" selection-end-line="207" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1028,26 +1103,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="718">
-          <caret line="406" column="3" selection-start-line="406" selection-start-column="3" selection-end-line="406" selection-end-column="3" />
+        <state relative-caret-position="210">
+          <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1374#1395#0" expanded="true" />
-            <element signature="method#deserializeFile#0;class#Main#0" expanded="false" />
-            <element signature="method#serializeFile#0;class#Main#0" expanded="false" />
-            <element signature="method#fileToObject#0;class#Main#0" expanded="false" />
-            <element signature="method#stringArrayToObject#0;class#Main#0" expanded="false" />
-            <element signature="method#printMap#0;class#Main#0" expanded="false" />
-            <element signature="method#getAlternateDataStream#0;class#Main#0" expanded="false" />
-            <element signature="method#streamToFile#0;class#Main#0" expanded="false" />
-            <element signature="method#setupODK#0;class#Main#0" expanded="false" />
-            <element signature="e#7195#7216#0" expanded="true" />
-            <element signature="method#typeChecker#0;class#Main#0" expanded="false" />
-            <element signature="e#8627#8648#0" expanded="true" />
-            <element signature="method#convertStringToMap#0;class#Main#0" expanded="false" />
             <element signature="method#evaluateArguments#0;class#Main#0" expanded="false" />
             <element signature="method#setupVariables#0;class#Main#0" expanded="false" />
+            <element signature="method#deserializeFile#0;class#Main#0" expanded="false" />
+            <element signature="method#setupODK#0;class#Main#0" expanded="false" />
+            <element signature="method#fileToObject#0;class#Main#0" expanded="false" />
+            <element signature="method#stringArrayToObject#0;class#Main#0" expanded="false" />
+            <element signature="method#typeChecker#0;class#Main#0" expanded="false" />
             <element signature="method#convertToTrueType#0;class#Main#0" expanded="false" />
+            <element signature="method#convertStringToMap#0;class#Main#0" expanded="false" />
+            <element signature="method#printMap#0;class#Main#0" expanded="false" />
+            <element signature="method#printMapsList#0;class#Main#0" expanded="false" />
+            <element signature="method#getAlternateDataStream#0;class#Main#0" expanded="false" />
+            <element signature="method#streamToFile#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>

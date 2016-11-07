@@ -42,7 +42,7 @@ public class Main {
 
         //DEBUG - CHECK THE TYPES OF THE VARIABLES
 //        typeChecker(collectedSettings);
-        typeChecker(hardCodedSettings);
+//        typeChecker(hardCodedSettings);
 
 
         if (READ_FROM_FILE){
@@ -60,10 +60,52 @@ public class Main {
         //3. Print out a serialized file
         serializeFile("collect_new.settings", mapsListFromFile);
 
-        System.out.println(mapsListFromFile);
+        //3.1 Print to console
+        printMapsList(mapsListFromFile);
 
-        //3.1 Alternatively, create a method to send a base64 version of serialized file as a string somewhere else
+        //3.2 Alternatively, create a method to send a base64 version of serialized file as a string somewhere else
+        System.out.println("PRINTING BASE 64 STRING!!!!!!!!!!!!!!!!");
+        System.out.println(createBase64(mapsListFromFile));
+    }
 
+    private static void evaluateArguments(String [] args){
+        argumentsGiven = false;
+
+        if (args.length == 2){
+            sentOdkUsername = args[0];
+            sentOdkPassword = args[1];
+            argumentsGiven = true;
+        }
+        else if (args.length == 3){
+            sentOdkUsername = args[0];
+            sentOdkPassword = args[1];
+            try {
+                if (Integer.parseInt(args[2]) == 1){
+                    READ_FROM_FILE = true;
+                }
+            } catch (Exception ex){
+                //System.out.println("UNABLE TO PARSE ARGUMENTS!");
+            }
+
+            argumentsGiven = true;
+        }
+        else{
+            System.out.println("WARNING: Incorrect number of arguments given.");
+            System.out.println("WARNING: Arguments should be 'Username, Password'.");
+            System.out.println("WARNING: Running program in test mode.\n");
+        }
+    }
+
+    private static void setupVariables(){
+        stringFile[0] = "{submission_url=/submission, lastVersion=1062, selected_google_account=, firstRun=false, font_size=21, map_basemap_behavior=streets, constraint_behavior=on_swipe, formlist_url=/formList, password=t3stt3st, protocol=odk_default, navigation=swipe, high_resolution=true, autosend_wifi=true, map_sdk_behavior=google_maps, autosend_network=false, server_url=https://abalobi-fisher.appspot.com, delete_send=false, default_completed=true, username=testcarlusername}";
+        stringFile[1] = "{jump_to=true, show_map_sdk=true, show_splash_screen=true, form_processing_logic=-1, get_blank=true, change_protocol_settings=true, show_map_basemap=true, mark_as_finalized=true, edit_saved=true, change_password=true, access_settings=true, navigation=true, high_resolution=true, save_as=true, change_language=true, delete_saved=true, delete_after_send=true, default_to_finalized=true, change_font_size=true, change_server=true, constraint_behavior=true, autosend_wifi=true, autosend_network=true, send_finalized=true, change_google_account=true, save_mid=true, change_username=true}";
+
+        file1Strings = new String[]{"submission_url", "selected_google_account", "font_size", "map_basemap_behavior", "constraint_behavior", "formlist_url", "password", "protocol", "navigation", "map_sdk_behavior", "server_url", "username"};
+        file1Booleans = new String[]{"firstRun", "high_resolution", "autosend_wifi", "autosend_network", "delete_send", "default_completed"};
+        file1Long = new String[]{"lastVersion"};
+
+        file2Booleans = new String[]{"jump_to", "show_map_sdk", "show_splash_screen", "get_blank", "change_protocol_settings", "show_map_basemap", "mark_as_finalized", "edit_saved", "change_password", "access_settings", "navigation", "high_resolution", "save_as", "change_language", "delete_saved", "delete_after_send", "default_to_finalized", "change_font_size", "change_server", "constraint_behavior", "autosend_wifi", "autosend_network", "send_finalized", "change_google_account", "save_mid", "change_username"};
+        file2Strings = new String[]{"form_processing_logic"};
     }
 
     private static void deserializeFile(String fileName, boolean debugOutput) {
@@ -113,6 +155,70 @@ public class Main {
             System.out.println("OTHER EXCEPTION: " + ex);
         }
     }
+
+    private static String createBase64(List<Map<Object, Object>> contents) {
+        String base64String = "";
+//        byte[] byteArrayOfFile = new byte[];
+        try {
+//            FileOutputStream outputStream = new FileOutputStream(fileName);
+            ByteArrayOutputStream byteOut = new ByteArrayOutputStream(9999);
+            ObjectOutputStream objectOutputStream = new ObjectOutputStream(byteOut);
+
+            //Run through the maps list
+            for (int i = 0; i < 2; i++) {
+                // printMap(contents.get(i));
+                // System.out.println("\n\n");
+                objectOutputStream.writeObject(contents.get(i));
+            }
+
+            base64String = byteOut.toString();
+
+        } catch (IOException e) {
+            System.out.println("oops...");
+            e.printStackTrace();
+        } catch (Exception ex){
+            System.out.println("OTHER EXCEPTION: " + ex);
+        }
+        return base64String;
+    }
+
+    private static List<Map<Object, Object>> setupODK(Object[] currentSettings, String odkUsername, String odkPassword){
+
+        // Create an array list of maps, mapsList
+        List<Map<Object, Object>> newMapList = new ArrayList<Map<Object, Object>>();      //Creates a list of maps that are found in the 'collectedSettings' object
+
+        //Runs through the array of objects  and adds to mapsList
+        for (int i = 0; i < currentSettings.length; i++) {
+            //noinspection unchecked
+            Map<Object, Object> newMap = (Map) currentSettings[i];                                        //creates a map from the object
+            newMapList.add(i, newMap);                                                    //adds each map to the list
+        }
+
+        // Update the file before serializing again
+        // mapsList.get(0).put("username", "carl@test.com");
+        newMapList.get(0).put("username", "test");
+        newMapList.get(0).put("password", "t3stt3st");
+
+        if (argumentsGiven){
+            newMapList.get(0).put("username", odkUsername);
+            newMapList.get(0).put("password", odkPassword);
+        }
+
+        newMapList.get(0).put("autosend_wifi", true);
+
+        // newMapList.get(1).put("change_username", true);
+//        System.out.println("\n\nUPDATED  LIST:");
+
+        for (int i = 0; i < currentSettings.length; i++) {
+            printMap(newMapList.get(i));
+//            System.out.println("\n\n");
+        }
+
+        return newMapList;
+
+    }
+
+    //UTILITY METHODS
 
     private static Object[] fileToObject(String fileName) {
         Object[] tempArray = new Object[2];
@@ -164,89 +270,6 @@ public class Main {
         return tempObj;
     }
 
-    public static void printMap(Map mp) {
-        Iterator it = mp.entrySet().iterator();
-        while (it.hasNext()) {
-            Map.Entry pair = (Map.Entry) it.next();
-            System.out.println(pair.getKey() + " = " + pair.getValue());
-            // it.remove(); // avoids a ConcurrentModificationException
-        }
-    }
-
-    private static StringBuilder getAlternateDataStream(String filename) {
-        File ads = new File(filename);
-        FileInputStream inputStream = null;
-        StringBuilder sb = new StringBuilder("");
-        try {
-            inputStream = new FileInputStream(ads);
-            System.out.println("Data Steam size in bytes : " + inputStream.available());
-            int content;
-            while ((content = inputStream.read()) != -1) {
-                sb.append((char) content);
-                System.out.print((char) content);
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            try {
-                if (inputStream != null)
-                    inputStream.close();
-            } catch (IOException ex) {
-                ex.printStackTrace();
-            }
-        }
-        return sb;
-    }
-
-    private static void streamToFile(String content, String filename) {
-        try {
-            OutputStream outputStream = new FileOutputStream(filename);
-            Writer writer = new OutputStreamWriter(outputStream);
-            writer.write(content);
-            writer.close();
-        } catch (FileNotFoundException f) {
-            f.printStackTrace();
-        } catch (IOException i) {
-            i.printStackTrace();
-        }
-    }
-
-    private static List<Map<Object, Object>> setupODK(Object[] currentSettings, String odkUsername, String odkPassword){
-
-        // Create an array list of maps, mapsList
-        List<Map<Object, Object>> newMapList = new ArrayList<Map<Object, Object>>();      //Creates a list of maps that are found in the 'collectedSettings' object
-
-        //Runs through the array of objects  and adds to mapsList
-        for (int i = 0; i < currentSettings.length; i++) {
-            //noinspection unchecked
-            Map<Object, Object> newMap = (Map) currentSettings[i];                                        //creates a map from the object
-            newMapList.add(i, newMap);                                                    //adds each map to the list
-        }
-
-        // Update the file before serializing again
-        // mapsList.get(0).put("username", "carl@test.com");
-        newMapList.get(0).put("username", "test");
-        newMapList.get(0).put("password", "t3stt3st");
-
-        if (argumentsGiven){
-            newMapList.get(0).put("username", odkUsername);
-            newMapList.get(0).put("password", odkPassword);
-        }
-
-        newMapList.get(0).put("autosend_wifi", true);
-
-        // newMapList.get(1).put("change_username", true);
-        System.out.println("\n\nUPDATED  LIST:");
-
-        for (int i = 0; i < currentSettings.length; i++) {
-            printMap(newMapList.get(i));
-            System.out.println("\n\n");
-        }
-
-        return newMapList;
-
-    }
-
     private static void typeChecker(Object[] checkMe){
 
         // Create an array list of maps, mapsList
@@ -277,72 +300,6 @@ public class Main {
             System.out.println("");
         }
 
-    }
-
-    private static Map<Object,Object> convertStringToMap(Object convertMe){
-        String value = convertMe.toString();
-        value = value.substring(1, value.length()-1);
-        //remove curly brackets
-        String[] keyValuePairs = value.split(",");              //split the string to create key-value pairs
-
-        Map<Object,Object> map = new HashMap<>();
-
-        for(int i = 0; i < keyValuePairs.length; i++)                        //iterate over the pairs
-        {
-            String[] entry = keyValuePairs[i].split("=");
-            //split the pairs to get key and value
-            if (entry.length == 1){
-                //This will happen if there is a null value
-                map.put(entry[0].trim(), "");
-            }
-            else{
-//                map.put(entry[0].trim(), entry[1].trim());
-                map.put(entry[0].trim(), convertToTrueType(entry[0].trim(), entry[1].trim()));
-            }
-
-            //add them to the hashmap and trim whitespaces
-        }
-        return map;
-    }
-
-    private static void evaluateArguments(String [] args){
-        argumentsGiven = false;
-
-        if (args.length == 2){
-            sentOdkUsername = args[0];
-            sentOdkPassword = args[1];
-            argumentsGiven = true;
-        }
-        else if (args.length == 3){
-            sentOdkUsername = args[0];
-            sentOdkPassword = args[1];
-            try {
-                if (Integer.parseInt(args[2]) == 1){
-                    READ_FROM_FILE = true;
-                }
-            } catch (Exception ex){
-                //System.out.println("UNABLE TO PARSE ARGUMENTS!");
-            }
-
-            argumentsGiven = true;
-        }
-        else{
-            System.out.println("WARNING: Incorrect number of arguments given.");
-            System.out.println("WARNING: Arguments should be 'Username, Password'.");
-            System.out.println("WARNING: Running program in test mode.\n");
-        }
-    }
-
-    private static void setupVariables(){
-        stringFile[0] = "{submission_url=/submission, lastVersion=1062, selected_google_account=, firstRun=false, font_size=21, map_basemap_behavior=streets, constraint_behavior=on_swipe, formlist_url=/formList, password=t3stt3st, protocol=odk_default, navigation=swipe, high_resolution=true, autosend_wifi=true, map_sdk_behavior=google_maps, autosend_network=false, server_url=https://abalobi-fisher.appspot.com, delete_send=false, default_completed=true, username=testcarlusername}";
-        stringFile[1] = "{jump_to=true, show_map_sdk=true, show_splash_screen=true, form_processing_logic=-1, get_blank=true, change_protocol_settings=true, show_map_basemap=true, mark_as_finalized=true, edit_saved=true, change_password=true, access_settings=true, navigation=true, high_resolution=true, save_as=true, change_language=true, delete_saved=true, delete_after_send=true, default_to_finalized=true, change_font_size=true, change_server=true, constraint_behavior=true, autosend_wifi=true, autosend_network=true, send_finalized=true, change_google_account=true, save_mid=true, change_username=true}";
-
-        file1Strings = new String[]{"submission_url", "selected_google_account", "font_size", "map_basemap_behavior", "constraint_behavior", "formlist_url", "password", "protocol", "navigation", "map_sdk_behavior", "server_url", "username"};
-        file1Booleans = new String[]{"firstRun", "high_resolution", "autosend_wifi", "autosend_network", "delete_send", "default_completed"};
-        file1Long = new String[]{"lastVersion"};
-
-        file2Booleans = new String[]{"jump_to", "show_map_sdk", "show_splash_screen", "get_blank", "change_protocol_settings", "show_map_basemap", "mark_as_finalized", "edit_saved", "change_password", "access_settings", "navigation", "high_resolution", "save_as", "change_language", "delete_saved", "delete_after_send", "default_to_finalized", "change_font_size", "change_server", "constraint_behavior", "autosend_wifi", "autosend_network", "send_finalized", "change_google_account", "save_mid", "change_username"};
-        file2Strings = new String[]{"form_processing_logic"};
     }
 
     private static Object convertToTrueType(String keyName, Object keyValue){
@@ -383,6 +340,106 @@ public class Main {
         return keyValue;
     }
 
+    private static Map<Object,Object> convertStringToMap(Object convertMe){
+        String value = convertMe.toString();
+        value = value.substring(1, value.length()-1);
+        //remove curly brackets
+        String[] keyValuePairs = value.split(",");              //split the string to create key-value pairs
+
+        Map<Object,Object> map = new HashMap<>();
+
+        for(int i = 0; i < keyValuePairs.length; i++)                        //iterate over the pairs
+        {
+            String[] entry = keyValuePairs[i].split("=");
+            //split the pairs to get key and value
+            if (entry.length == 1){
+                //This will happen if there is a null value
+                map.put(entry[0].trim(), "");
+            }
+            else{
+//                map.put(entry[0].trim(), entry[1].trim());
+                map.put(entry[0].trim(), convertToTrueType(entry[0].trim(), entry[1].trim()));
+            }
+
+            //add them to the hashmap and trim whitespaces
+        }
+        return map;
+    }
+
+    private static void printMap(Map mp) {
+        Iterator it = mp.entrySet().iterator();
+        while (it.hasNext()) {
+            Map.Entry pair = (Map.Entry) it.next();
+            System.out.println(pair.getKey() + " = " + pair.getValue());
+            // it.remove(); // avoids a ConcurrentModificationException
+        }
+    }
+
+    private static void printMapsList(List<Map<Object, Object>> convertMe){
+        String outputString = "";
+        //Safety Feature
+        int timesToRun = 0;
+
+        //Iterate through list
+        Iterator it = convertMe.iterator();
+        while (it.hasNext() && timesToRun < 100) {
+            Map<Object, Object> currentMap = (Map) it.next();
+
+            System.out.println("\nOutputting map: " + (timesToRun+1) + "\n");
+            //Iterate through map
+            for (Map.Entry<Object, Object> entry : currentMap.entrySet()) {
+                String key = entry.getKey().toString();
+                Object value = entry.getValue();
+                System.out.println(key + ", " + value);
+            }
+
+
+            //Recursive method safety
+            //System.out.println("TEST");
+            timesToRun++;
+        }
+    }
+
+
+    //UNUSED METHODS
+
+    private static StringBuilder getAlternateDataStream(String filename) {
+        File ads = new File(filename);
+        FileInputStream inputStream = null;
+        StringBuilder sb = new StringBuilder("");
+        try {
+            inputStream = new FileInputStream(ads);
+            System.out.println("Data Steam size in bytes : " + inputStream.available());
+            int content;
+            while ((content = inputStream.read()) != -1) {
+                sb.append((char) content);
+                System.out.print((char) content);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (inputStream != null)
+                    inputStream.close();
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+        }
+        return sb;
+    }
+
+    private static void streamToFile(String content, String filename) {
+        try {
+            OutputStream outputStream = new FileOutputStream(filename);
+            Writer writer = new OutputStreamWriter(outputStream);
+            writer.write(content);
+            writer.close();
+        } catch (FileNotFoundException f) {
+            f.printStackTrace();
+        } catch (IOException i) {
+            i.printStackTrace();
+        }
+    }
 
 }
 
